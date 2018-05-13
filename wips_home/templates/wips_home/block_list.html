@@ -1,0 +1,17 @@
+{% extends 'wips_home/base.html' %}
+
+{% block content %}	
+	{% for BlockLog in BlockLogS %}
+		<div>
+		    <p>number: {{ BlockLog.number }}</p>
+		    <p><a href="{% url 'block_list_post' pk=BlockLog.pk %}">mac: {{ BlockLog.mac }}</a></p>
+		    
+		    <!--<p>block_pkt: {{ BlockLog.block_pkt }}</p>
+		    <p>atk_type: {{ BlockLog.atk_type }}</p>
+		    <p>pkt_time: {{ BlockLog.pkt_time }}</p>
+		    <p>block_stat: {{ BlockLog.block_stat }}</p>
+		    <button type="submit" >Save</button> -->
+		</div>
+		<br>
+	{% endfor %}
+{% endblock %}	

@@ -1,0 +1,70 @@
+about mariadb
+1.how to check installed status maria db
+
+rpm -qa maria*
+-> no data? then you need install
+-> if has data then you can see version about mariadb
+
+
+2. install mysql(mariadb)
+
+apt-get install libmysqlcppconn*
+
+3. start mysql service command
+
+service mysql start
+
+if you want change stringset "utf8"
+change setting "/etc/mysql/my.cnf" file with googling! 
+
+your primary key column must 'not null' option
+not null means no accept none data column.
+
+innodb engine is more faster than default engine
+
+
+alter table 테이블 이름 engine = InnoDB;
+
+조회
+DB목록
+SHOW DATABASES;
+
+테이블 목록
+SHOW TABLES;
+테이블 구조 확인
+DESC TABLENAME;
+
+SELECT * FROM 테이블명;
+
+사용자 생성
+create user 'userid'@'localhost'identified by 'password';
+사용자 제거
+drop user 'userid';
+
+
+변경된 권한 적용
+flush privileges;
+권한 확인
+show grants for userid@host;
+권한 삭제
+revoke all on dbname.table from username@host
+
+
+----참고사이트-----
+db설치
+http://blog.dork94.com/62
+
+db연동
+http://database.sarang.net/database/mysql/capi/capi.html
+
+
+
+유저생성 &권한 설정
+http://ourcstory.tistory.com/45
+
+
+---참고사항----
+
+drop user 랑 delete user 차이?
+
+
