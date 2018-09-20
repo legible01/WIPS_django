@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'wips_home',
+    'wips_white',
+    'wips_black',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +87,10 @@ DATABASES = {
         'PASSWORD': 'packethunter',
         'HOST': 'localhost',
         'PORT': '',
+        'OPTIONS':{
+            'sql_mode':'traditional',
+        
+        }
     }
 }
 
