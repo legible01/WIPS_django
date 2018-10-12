@@ -11,7 +11,7 @@ class BlockLog(models.Model):
     #mac = fieldType.PositiveBigIntegerField()
     mac = models.CharField(max_length=12)
     #block_pkt = models.FileField()
-    atk_type = models.TextField()
+    atk_type = models.TextField(blank = True)
     #pkt_time = models.DateTimeField(
      #       blank=True, null=True)
     block_stat = models.BooleanField(blank=True,default='False')
